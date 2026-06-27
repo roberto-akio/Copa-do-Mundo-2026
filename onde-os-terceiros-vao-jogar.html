@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copa 2026 · Por que ainda não sabemos onde alguns terceiros vão jogar · A tabela de 495 linhas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a1628;
+    --navy-2:#0f1f3a;
+    --navy-3:#16294a;
+    --pitch:#3ddc84;
+    --pitch-dim:#2bb169;
+    --gold:#f2c14e;
+    --gold-dim:#caa03b;
+    --ink:#eaf1fb;
+    --muted:#9fb2cf;
+    --chalk:rgba(159,178,207,.6);
+    --line:rgba(159,178,207,.16);
+    --red:#e0573e;
+    --disp:'Oswald','Arial Narrow',sans-serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--navy);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:4rem;
+  }
+  body::before{
+    content:"";position:fixed;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;
+    background:radial-gradient(120% 70% at 50% -8%,var(--navy-2),var(--navy) 62%);
+  }
+  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 22px;}
+
+  /* ===== NAV ===== */
+  .topbar{
+    position:-webkit-sticky;position:sticky;top:0;z-index:30;
+    background:rgba(10,22,40,.95);
+    border-bottom:1px solid var(--line);
+    backdrop-filter:saturate(140%) blur(6px);
+  }
+  .topbar .inner{
+    max-width:880px;margin:0 auto;padding:11px 22px;
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  }
+  .brand{
+    font-family:var(--disp);font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    font-size:13px;color:var(--gold);white-space:nowrap;
+  }
+  .brand span{color:var(--pitch);}
+  .navlinks{display:flex;gap:7px 16px;flex-wrap:wrap;}
+  .navlinks a{
+    font-family:var(--disp);font-weight:500;letter-spacing:.04em;
+    font-size:13px;color:var(--muted);text-decoration:none;text-transform:uppercase;
+    padding:2px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
+  }
+  .navlinks a:hover,.navlinks a:focus{color:var(--ink);border-color:var(--pitch);outline:none;}
+
+  /* ===== HERO ===== */
+  .hero{padding:54px 0 30px;}
+  .eyebrow{
+    font-family:var(--disp);font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    font-size:13px;color:var(--pitch);margin-bottom:14px;
+  }
+  .hero h1{
+    font-family:var(--disp);font-weight:700;line-height:1.04;
+    font-size:clamp(34px,7vw,62px);letter-spacing:-.01em;margin-bottom:18px;
+  }
+  .hero h1 em{color:var(--gold);font-style:normal;}
+  .lede{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:62ch;}
+  .meta{
+    margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+    font-family:var(--disp);letter-spacing:.05em;text-transform:uppercase;
+    font-size:13px;color:var(--chalk);
+  }
+  .meta b{color:var(--ink);font-weight:500;}
+
+  /* ===== SECTIONS ===== */
+  section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:64px;}
+  .kicker{
+    font-family:var(--disp);font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    font-size:13px;color:var(--gold);margin-bottom:8px;
+  }
+  h2{
+    font-family:var(--disp);font-weight:700;line-height:1.08;
+    font-size:clamp(26px,4.4vw,40px);letter-spacing:-.005em;margin-bottom:16px;
+  }
+  h3{
+    font-family:var(--disp);font-weight:600;font-size:21px;letter-spacing:.01em;
+    margin:24px 0 8px;color:var(--ink);
+  }
+  p{margin-bottom:14px;color:#d6e1f2;}
+  p.muted{color:var(--muted);}
+  a.inl{color:var(--pitch);text-decoration:none;border-bottom:1px solid rgba(61,220,132,.4);}
+
+  /* ===== CALLOUT ===== */
+  .callout{
+    background:var(--navy-2);border-left:3px solid var(--pitch);border-radius:0 10px 10px 0;
+    padding:16px 18px;margin:18px 0;
+  }
+  .callout.gold{border-left-color:var(--gold);}
+  .callout .lab{
+    font-family:var(--disp);letter-spacing:.14em;text-transform:uppercase;
+    font-size:11px;color:var(--gold);margin-bottom:6px;
+  }
+  .callout.gold .lab{color:var(--pitch);}
+  .callout p:last-child{margin-bottom:0;}
+
+  /* ===== STAT STRIP ===== */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:18px 0;}
+  .stat{background:var(--navy-2);padding:16px 14px;text-align:center;}
+  .stat .n{font-family:var(--disp);font-weight:700;font-size:34px;color:var(--gold);line-height:1;}
+  .stat .n.green{color:var(--pitch);}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.3;}
+
+  /* ===== PAIR CARDS ===== */
+  .pairs{display:grid;gap:10px;margin-top:6px;}
+  .pair{
+    background:var(--navy-2);border:1px solid var(--line);border-radius:10px;
+    padding:13px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .pair .mt{font-family:var(--disp);font-weight:500;font-size:17px;letter-spacing:.01em;flex:1;min-width:200px;}
+  .pair .mt b{color:var(--pitch);font-weight:600;}
+  .pair .lk{
+    font-family:var(--disp);letter-spacing:.08em;text-transform:uppercase;font-size:10px;
+    padding:3px 9px;border-radius:999px;white-space:nowrap;
+    background:rgba(61,220,132,.12);color:var(--pitch);border:1px solid rgba(61,220,132,.3);
+  }
+  .pair .lk.gold{background:rgba(242,193,78,.12);color:var(--gold);border-color:rgba(242,193,78,.32);}
+
+  /* ===== HEATMAP ===== */
+  .hm-wrap{border:1px solid var(--line);border-radius:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;}
+  table.hm{border-collapse:collapse;min-width:560px;width:100%;}
+  table.hm th{
+    font-family:var(--disp);font-weight:500;letter-spacing:.04em;
+    font-size:12px;color:var(--muted);background:var(--navy-3);
+    padding:8px 6px;border:1px solid var(--line);white-space:nowrap;
+  }
+  table.hm th.corner{font-size:10px;color:var(--chalk);text-align:left;}
+  table.hm th.rh{color:var(--gold);text-align:center;}
+  table.hm td{
+    font-family:var(--disp);font-weight:600;font-size:13px;color:var(--ink);
+    text-align:center;padding:8px 6px;border:1px solid var(--line);min-width:38px;
+  }
+  table.hm td.hi{color:var(--navy);}
+  table.hm td.z{color:rgba(159,178,207,.28);font-weight:400;}
+  .legend{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);}
+  .legend .scale{display:flex;height:12px;border-radius:3px;overflow:hidden;width:160px;border:1px solid var(--line);}
+  .legend .scale i{flex:1;}
+  .tbl-note{font-size:13px;color:var(--muted);margin-top:10px;}
+
+  /* ===== FOOTER ===== */
+  footer{padding:30px 0 0;border-top:1px solid var(--line);margin-top:34px;}
+  footer p{font-size:13px;color:var(--chalk);margin-bottom:6px;}
+  footer .src{color:var(--muted);}
+  footer .src b{color:var(--gold);font-weight:600;}
+
+  @media (max-width:560px){
+    .hero{padding:38px 0 24px;}
+    section{padding:28px 0;}
+    .navlinks{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="inner">
+    <div class="brand">Copa 2026 · <span>Annexe C</span></div>
+    <nav class="navlinks">
+      <a href="#equador">O enigma</a>
+      <a href="#tabela">A tabela</a>
+      <a href="#porque">Por que existe</a>
+      <a href="#padroes">Os padrões</a>
+      <a href="#mapa">Os 126 cenários</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">26 de junho de 2026 · Explicador · Formato</div>
+    <h1>Por que ainda não sabemos onde alguns <em>terceiros</em> vão jogar? Uma tabela de 495 linhas tem a resposta.</h1>
+    <p class="lede">O Equador derrubou a Alemanha e garantiu vaga no mata-mata — mas ainda não sabe contra quem joga. A resposta mora em uma tabela de 495 linhas na página 80 do regulamento da FIFA, o "Annexe C". Entenda como ela funciona e por que ela não é tão aleatória quanto parece.</p>
+    <div class="meta">Explicador · <b>Como o round de 32 é definido</b></div>
+  </header>
+
+  <!-- O ENIGMA -->
+  <section id="equador">
+    <div class="kicker">O ponto de partida</div>
+    <h2>O Equador se classificou — e não sabe o próximo adversário</h2>
+    <p>Assim que o Equador surpreendeu a Alemanha e conquistou uma vaga nas fases eliminatórias, uma cena emocionada de comemoração tomou conta do estádio. A seleção entregou um dos melhores dias de sua história, e o presidente do país decretou feriado nacional no dia seguinte.</p>
+    <p>E o que vem agora no torneio? Eles não sabem. Seguem esperando para descobrir quem vão enfrentar no round de 32 — porque a resposta depende de quais <b>outras</b> seleções terminarem entre os melhores terceiros colocados.</p>
+  </section>
+
+  <!-- A TABELA -->
+  <section id="tabela">
+    <div class="kicker">O documento</div>
+    <h2>495 linhas, oito vagas, um conjunto</h2>
+    <p>A resposta está em uma tabela de 495 linhas na página 80 do "Annexe C: Combinações para as oito melhores seleções em terceiro lugar", dentro do regulamento da FIFA para o torneio.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n green">495</div><div class="l">combinações possíveis de terceiros</div></div>
+      <div class="stat"><div class="n">8 de 12</div><div class="l">terceiros avançam</div></div>
+      <div class="stat"><div class="n">pág. 80</div><div class="l">do regulamento (Annexe C)</div></div>
+    </div>
+
+    <p>No novo formato de 48 seleções, os oito melhores entre os 12 terceiros colocados avançam. Isso significa <b>495 combinações possíveis</b> de terceiros classificados — escolher 8 grupos entre 12, o famoso "12 escolhe 8" das aulas de estatística.</p>
+
+    <p>A FIFA <b>não ordena nem ranqueia</b> os terceiros dentro desse top 8: ela os trata como um conjunto. Assim que se sabe quais oito terceiros entraram, basta ir à linha específica da tabela para ver onde cada um cairá no chaveamento.</p>
+
+    <div class="callout gold">
+      <div class="lab">Uma exceção importante</div>
+      <p>Os vencedores de quatro grupos — <b>C, F, H e J</b> — não entram nessa conta: eles enfrentam um <b>vice de grupo</b> no round de 32, e não um terceiro colocado.</p>
+    </div>
+  </section>
+
+  <!-- POR QUE EXISTE -->
+  <section id="porque">
+    <div class="kicker">A lógica por trás</div>
+    <h2>Por que toda essa engenharia?</h2>
+    <p>A razão principal da tabela é garantir que os terceiros classificados não reencontrem, logo de cara, um adversário que estava em seu próprio grupo. Esses pareamentos pré-determinados asseguram que <b>nenhum terceiro colocado jogará contra um time do seu grupo antes das quartas de final</b>.</p>
+    <p>A tabela também ajuda a equilibrar o descanso: a organização não quer equipes disputando dois jogos em três dias. É menos caos do que parece — e mais calendário.</p>
+  </section>
+
+  <!-- OS PADRÕES -->
+  <section id="padroes">
+    <div class="kicker">Não é tão aleatório</div>
+    <h2>Há padrões claros na tabela</h2>
+    <p>Não é uma tabela convidativa, mas tem regularidades. Alguns confrontos do round de 32 sempre foram muito mais prováveis que outros.</p>
+
+    <div class="pairs">
+      <div class="pair">
+        <span class="mt">3º do <b>Grupo L</b> → vencedor do <b>Grupo K</b></span>
+        <span class="lk gold">Garantido em todos os cenários</span>
+      </div>
+      <div class="pair">
+        <span class="mt"><b>EUA</b> (1º do Grupo D) → 3º do <b>Grupo B</b></span>
+        <span class="lk">329 de 330 cenários</span>
+      </div>
+    </div>
+
+    <p style="margin-top:16px;">Enquanto o terceiro do Grupo L avançasse, ele estava garantido a pegar o vencedor do Grupo K em <b>todo</b> cenário possível — é por isso que se projeta Portugal ou Colômbia contra Gana ou Croácia.</p>
+
+    <p>O mesmo vale para os <b>Estados Unidos</b>: desde que vencessem o Grupo D, eram fortíssimos candidatos a enfrentar a Bósnia e Herzegovina (ou o Catar, caso este tivesse terminado em terceiro no Grupo B). Dos 330 cenários em que um terceiro do Grupo B avançava, <b>329</b> colocavam o vencedor do Grupo D contra esse terceiro.</p>
+  </section>
+
+  <!-- MAPA DE CALOR -->
+  <section id="mapa">
+    <div class="kicker">O estado atual</div>
+    <h2>Sobraram 126 cenários — e o mapa fica mais claro</h2>
+    <p>Antes dos jogos de sexta-feira, <b>Suécia, Equador e Bósnia e Herzegovina</b> já garantiram vaga no mata-mata como terceiros colocados. Isso eliminou muitas combinações: das 495 originais, restam apenas <b>126</b> possíveis.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">495</div><div class="l">combinações no início</div></div>
+      <div class="stat"><div class="n green">126</div><div class="l">ainda possíveis</div></div>
+      <div class="stat"><div class="n green">3</div><div class="l">terceiros já garantidos</div></div>
+    </div>
+
+    <p>O mapa abaixo mostra, para cada <b>vencedor de grupo</b> (linhas) que enfrenta um terceiro, em quantos dos 126 cenários ele pegaria o terceiro de cada grupo (colunas). Quanto mais verde, mais provável o confronto.</p>
+
+    <div class="hm-wrap">
+      <table class="hm">
+        <thead>
+          <tr><th class="corner">1º ↓ / 3º →</th><th>3A</th><th>3B</th><th>3C</th><th>3D</th><th>3E</th><th>3F</th><th>3G</th><th>3H</th><th>3I</th><th>3J</th><th>3K</th><th>3L</th></tr>
+        </thead>
+        <tbody>
+          <tr><th class="rh">1A</th><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.23);">29</td><td class="z">·</td><td style="background:rgba(61,220,132,0.49);">62</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.28);">35</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1B</th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.12);">15</td><td style="background:rgba(61,220,132,0.03);">1</td><td style="background:rgba(61,220,132,0.48);">60</td><td class="z">·</td><td style="background:rgba(61,220,132,0.04);">5</td><td style="background:rgba(61,220,132,0.36);">45</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1D</th><td class="z">·</td><td class="hi" style="background:rgba(61,220,132,1.0);">126</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1E</th><td style="background:rgba(61,220,132,0.03);">2</td><td class="z">·</td><td style="background:rgba(61,220,132,0.33);">41</td><td class="hi" style="background:rgba(61,220,132,0.51);">64</td><td class="z">·</td><td style="background:rgba(61,220,132,0.15);">19</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1G</th><td class="hi" style="background:rgba(61,220,132,0.54);">68</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.05);">6</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.21);">26</td><td style="background:rgba(61,220,132,0.08);">10</td><td style="background:rgba(61,220,132,0.13);">16</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1I</th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.03);">1</td><td class="z">·</td><td class="hi" style="background:rgba(61,220,132,0.84);">106</td><td style="background:rgba(61,220,132,0.08);">10</td><td style="background:rgba(61,220,132,0.07);">9</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td></tr>
+          <tr><th class="rh">1K</th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.04);">5</td><td style="background:rgba(61,220,132,0.21);">27</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.17);">22</td><td style="background:rgba(61,220,132,0.03);">2</td><td class="z">·</td><td class="hi" style="background:rgba(61,220,132,0.56);">70</td></tr>
+          <tr><th class="rh">1L</th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.13);">16</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="background:rgba(61,220,132,0.26);">33</td><td style="background:rgba(61,220,132,0.06);">7</td><td class="hi" style="background:rgba(61,220,132,0.56);">70</td><td class="z">·</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span>Menos provável</span>
+      <span class="scale"><i style="background:rgba(61,220,132,0.06);"></i><i style="background:rgba(61,220,132,0.25);"></i><i style="background:rgba(61,220,132,0.5);"></i><i style="background:rgba(61,220,132,0.75);"></i><i style="background:rgba(61,220,132,1);"></i></span>
+      <span>Mais provável</span>
+    </div>
+    <p class="tbl-note">Cada linha soma 126. Linhas = vencedores de grupo que pegam um terceiro; colunas = terceiro de cada grupo. Os grupos C, F, H e J não aparecem como linha porque seus vencedores enfrentam um vice.</p>
+
+    <div class="callout">
+      <div class="lab">Leitura do mapa</div>
+      <p>O vencedor do <b>Grupo I (França)</b> quase certamente pega o terceiro do <b>Grupo F (Suécia)</b> — 106 dos 126 cenários. Restam 20 cenários, todos muito improváveis, que levariam a um terceiro dos Grupos D, G ou H. Já o vencedor do <b>Grupo D (EUA)</b> está 100% travado no terceiro do <b>Grupo B</b>.</p>
+    </div>
+
+    <div class="callout gold">
+      <div class="lab">A ressalva dos autores</div>
+      <p>O vencedor do <b>Grupo G (potencialmente o Egito)</b> provavelmente pegaria o terceiro do <b>Grupo A (Coreia do Sul)</b> — desde que o terceiro do Grupo A esteja entre os classificados, algo estimado em torno de 50%. Contar apenas quantos cenários levam a um confronto não reflete totalmente a probabilidade real, pois ignora os resultados esperados dos jogos. Uma previsão que pondere esses resultados é a melhor forma de acompanhar quem cada seleção pode pegar.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copa do Mundo 2026 · Por que ainda não sabemos onde alguns terceiros vão jogar · 26 de junho de 2026.</p>
+    <p class="src">Fonte: <b>The Athletic</b> — análise de Ryan Best e Emily Giambalvo.</p>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var links = document.querySelectorAll('.navlinks a');
+    for (var i = 0; i < links.length; i++){
+      links[i].addEventListener('click', function(e){
+        var id = this.getAttribute('href');
+        if (id && id.charAt(0) === '#'){
+          var target = document.querySelector(id);
+          if (target){
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
