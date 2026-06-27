@@ -3,249 +3,417 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copa 2026 · Dia 15 · Equador derruba a Alemanha e EUA tropeçam</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Equador derruba a Alemanha e EUA tropeçam — Resumo do Dia 15</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
   :root{
-    --navy:#0a1628;
-    --navy-2:#0f1f3a;
-    --navy-3:#16294a;
+    --night:#0b1220;
+    --night-2:#111b2e;
+    --card:#16223a;
+    --line:#26344f;
     --pitch:#3ddc84;
-    --pitch-dim:#2bb169;
+    --pitch-dim:#27a866;
     --gold:#f2c14e;
-    --gold-dim:#caa03b;
-    --ink:#eaf1fb;
-    --muted:#9fb2cf;
-    --chalk:rgba(159,178,207,.6);
-    --line:rgba(159,178,207,.16);
-    --red:#e0573e;
-    --disp:'Oswald','Arial Narrow',sans-serif;
-    --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --ink:#eaf1ff;
+    --muted:#9fb0cc;
+    --red:#ff5d5d;
+    --display:'Oswald','Arial Narrow',Impact,sans-serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
   body{
-    font-family:var(--body);
+    margin:0;
+    background:var(--night);
     color:var(--ink);
-    background:var(--navy);
+    font-family:var(--body);
     line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    padding-bottom:4rem;
+    font-size:17px;
   }
-  body::before{
-    content:"";position:fixed;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;
-    background:radial-gradient(120% 70% at 50% -8%,var(--navy-2),var(--navy) 62%);
-  }
-  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 22px;}
+  a{color:var(--pitch);text-decoration:none;}
 
-  /* ===== NAV ===== */
-  .topbar{
-    position:-webkit-sticky;position:sticky;top:0;z-index:30;
-    background:rgba(10,22,40,.95);
+  /* ---------- Nav ---------- */
+  .nav{
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(11,18,32,0.92);
     border-bottom:1px solid var(--line);
-    backdrop-filter:saturate(140%) blur(6px);
+    -webkit-backdrop-filter:blur(8px);
+    backdrop-filter:blur(8px);
   }
-  .topbar .inner{
-    max-width:880px;margin:0 auto;padding:11px 22px;
-    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  .nav-inner{
+    max-width:1040px;
+    margin:0 auto;
+    padding:12px 22px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px 18px;
   }
-  .brand{
-    font-family:var(--disp);font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-    font-size:13px;color:var(--gold);white-space:nowrap;
+  .nav-brand{
+    font-family:var(--display);
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:14px;
+    color:var(--gold);
+    margin-right:auto;
   }
-  .brand span{color:var(--pitch);}
-  .navlinks{display:flex;gap:7px 16px;flex-wrap:wrap;}
-  .navlinks a{
-    font-family:var(--disp);font-weight:500;letter-spacing:.04em;
-    font-size:13px;color:var(--muted);text-decoration:none;text-transform:uppercase;
-    padding:2px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
+  .nav-brand b{color:var(--pitch);}
+  .nav a.nav-link{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:13px;
+    font-weight:500;
+    color:var(--muted);
+    border-bottom:2px solid transparent;
+    padding-bottom:2px;
   }
-  .navlinks a:hover,.navlinks a:focus{color:var(--ink);border-color:var(--pitch);outline:none;}
+  .nav a.nav-link:hover{color:var(--ink);border-bottom-color:var(--pitch);}
 
-  /* ===== HERO ===== */
-  .hero{padding:54px 0 30px;}
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px;}
+  section{padding:54px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+
   .eyebrow{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:12px;
+    color:var(--pitch);
+    margin:0 0 14px;
+  }
+  h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;}
+  h2{font-size:clamp(28px,5vw,44px);font-weight:700;letter-spacing:.01em;margin-bottom:20px;}
+  h3{font-size:22px;font-weight:600;color:var(--gold);margin:30px 0 10px;}
+  p{margin:0 0 18px;color:#dbe5f5;}
+  .lead{font-size:19px;color:var(--ink);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:64px 0 56px;
+    background:
+      radial-gradient(900px 380px at 78% -10%, rgba(61,220,132,0.16), transparent 60%),
+      radial-gradient(700px 360px at 10% 0%, rgba(242,193,78,0.12), transparent 60%),
+      linear-gradient(180deg,var(--night-2),var(--night));
+  }
+  .hero .kicker{
     display:inline-block;
-    font-family:var(--disp);font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    font-size:13px;color:var(--navy);background:var(--gold);
-    padding:5px 12px;border-radius:3px;margin-bottom:18px;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:13px;
+    font-weight:600;
+    color:var(--night);
+    background:var(--gold);
+    padding:5px 12px;
+    border-radius:3px;
+    margin-bottom:18px;
   }
   .hero h1{
-    font-family:var(--disp);font-weight:700;line-height:1.04;
-    font-size:clamp(34px,7vw,62px);letter-spacing:-.01em;margin-bottom:18px;
+    font-size:clamp(34px,7vw,68px);
+    font-weight:700;
+    letter-spacing:.005em;
+    margin-bottom:18px;
   }
-  .hero h1 em{color:var(--gold);font-style:normal;}
-  .lede{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:62ch;}
-  .meta{
-    margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
-    font-family:var(--disp);letter-spacing:.05em;text-transform:uppercase;
-    font-size:13px;color:var(--chalk);
+  .hero h1 .hl{color:var(--pitch);}
+  .hero h1 .gl{color:var(--gold);}
+  .hero .sub{font-size:19px;color:var(--muted);max-width:760px;}
+  .hero .meta{
+    margin-top:22px;
+    font-family:var(--display);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--muted);
   }
-  .meta b{color:var(--ink);font-weight:500;}
-  .source{
-    display:inline-block;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);
-    font-family:var(--disp);letter-spacing:.16em;text-transform:uppercase;
-    font-size:13px;color:var(--ink);
+  .hero .source{
+    display:inline-block;
+    margin-top:18px;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    font-family:var(--display);
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--ink);
   }
-  .source b{color:var(--pitch);font-weight:600;}
+  .hero .source b{color:var(--pitch);font-weight:600;}
 
-  /* ===== SECTIONS ===== */
-  section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:64px;}
-  .kicker{
-    font-family:var(--disp);font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-    font-size:13px;color:var(--gold);margin-bottom:8px;
+  /* ---------- Placar ---------- */
+  .scoreboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:14px;
+    margin-top:10px;
   }
-  h2{
-    font-family:var(--disp);font-weight:700;line-height:1.08;
-    font-size:clamp(26px,4.4vw,40px);letter-spacing:-.005em;margin-bottom:16px;
+  .match{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    border-left:4px solid var(--pitch-dim);
   }
-  h3{
-    font-family:var(--disp);font-weight:600;font-size:21px;letter-spacing:.01em;
-    margin:24px 0 8px;color:var(--ink);
+  .match .tag{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-size:11px;
+    color:var(--muted);
+    margin-bottom:12px;
   }
-  p{margin-bottom:14px;color:#d6e1f2;}
-  p.muted{color:var(--muted);}
-  a.inl{color:var(--pitch);text-decoration:none;border-bottom:1px solid rgba(61,220,132,.4);}
+  .match .tag b{color:var(--gold);font-weight:600;}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;}
+  .row .team{font-weight:600;font-size:18px;}
+  .row .pts{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:22px;
+    min-width:30px;
+    text-align:right;
+  }
+  .row.win .team,.row.win .pts{color:var(--pitch);}
+  .row.draw .team,.row.draw .pts{color:var(--gold);}
 
-  /* ===== SCOREBOARD ===== */
-  .scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:12px;margin-top:6px;}
-  .game{
-    background:var(--navy-2);border:1px solid var(--line);border-radius:12px;
-    padding:14px 16px;display:flex;flex-direction:column;gap:9px;
-  }
-  .game .grp{
-    font-family:var(--disp);letter-spacing:.16em;text-transform:uppercase;
-    font-size:11px;color:var(--chalk);
-  }
-  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-  .row .tm{font-family:var(--disp);font-weight:500;font-size:18px;letter-spacing:.01em;}
-  .row .sc{font-family:var(--disp);font-weight:700;font-size:22px;color:var(--gold);min-width:24px;text-align:right;}
-  .row.win .tm{color:var(--ink);}
-  .row.win .sc{color:var(--pitch);}
-  .row.lose .tm,.row.lose .sc{color:var(--muted);}
-  .tag{
-    display:inline-block;font-family:var(--disp);letter-spacing:.08em;text-transform:uppercase;
-    font-size:10px;padding:3px 8px;border-radius:999px;margin-top:2px;
-    background:rgba(61,220,132,.12);color:var(--pitch);border:1px solid rgba(61,220,132,.3);
-  }
-  .tag.gold{background:rgba(242,193,78,.12);color:var(--gold);border-color:rgba(242,193,78,.32);}
-
-  /* ===== CALLOUT ===== */
+  /* ---------- Destaque (callout) ---------- */
   .callout{
-    background:var(--navy-2);border-left:3px solid var(--pitch);border-radius:0 10px 10px 0;
-    padding:16px 18px;margin:18px 0;
+    background:linear-gradient(180deg,rgba(242,193,78,0.10),rgba(242,193,78,0.03));
+    border:1px solid rgba(242,193,78,0.35);
+    border-radius:12px;
+    padding:24px 26px;
+    margin:26px 0;
   }
-  .callout.gold{border-left-color:var(--gold);}
-  .callout .lab{
-    font-family:var(--disp);letter-spacing:.14em;text-transform:uppercase;
-    font-size:11px;color:var(--gold);margin-bottom:6px;
+  .callout .label{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12px;
+    color:var(--gold);
+    margin-bottom:8px;
   }
-  .callout.gold .lab{color:var(--pitch);}
   .callout p:last-child{margin-bottom:0;}
 
-  /* ===== STAT STRIP ===== */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
-    background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:18px 0;}
-  .stat{background:var(--navy-2);padding:16px 14px;text-align:center;}
-  .stat .n{font-family:var(--disp);font-weight:700;font-size:34px;color:var(--gold);line-height:1;}
-  .stat .n.green{color:var(--pitch);}
-  .stat .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.3;}
-
-  /* ===== TABLE (terceiros) ===== */
-  .tbl-wrap{border:1px solid var(--line);border-radius:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;}
-  table{width:100%;border-collapse:collapse;min-width:460px;}
-  thead th{
-    font-family:var(--disp);font-weight:500;letter-spacing:.1em;text-transform:uppercase;
-    font-size:11px;color:var(--chalk);text-align:right;padding:11px 10px;
-    background:var(--navy-3);border-bottom:1px solid var(--line);
-    -webkit-user-select:none;user-select:none;white-space:nowrap;
+  /* ---------- Stats strip ---------- */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:14px;
+    margin:24px 0;
   }
-  thead th.l{text-align:left;}
-  tbody td{padding:10px;font-size:14px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
-  tbody td.l{text-align:left;}
-  tbody td.tm{font-family:var(--disp);font-weight:500;font-size:16px;letter-spacing:.01em;}
-  tbody td.grp{font-family:var(--disp);color:var(--chalk);font-size:13px;}
-  tbody td.pts{font-family:var(--disp);font-weight:700;font-size:17px;color:var(--gold);}
-  tbody tr.qual td.tm{color:var(--pitch);}
-  tbody tr.qual td.chk{color:var(--pitch);}
-  .cutline td{
-    padding:6px 10px;background:var(--navy-3);
-    font-family:var(--disp);letter-spacing:.16em;text-transform:uppercase;
-    font-size:11px;color:var(--pitch);text-align:center;border-top:2px dashed rgba(61,220,132,.5);
+  .stat{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px;
+    text-align:center;
   }
-  .tbl-note{font-size:13px;color:var(--muted);margin-top:10px;}
-
-  /* ===== FIXTURES ===== */
-  .fixtures{display:grid;gap:10px;margin-top:6px;}
-  .fix{
-    background:var(--navy-2);border:1px solid var(--line);border-radius:10px;
-    padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  .stat .num{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:38px;
+    line-height:1;
+    color:var(--pitch);
   }
-  .fix .mt{font-family:var(--disp);font-weight:500;font-size:17px;letter-spacing:.01em;}
-  .fix .gp{font-family:var(--disp);letter-spacing:.12em;text-transform:uppercase;font-size:11px;color:var(--chalk);}
-  .fix .hr{font-family:var(--disp);font-weight:600;font-size:15px;color:var(--gold);white-space:nowrap;}
+  .stat .num.gold{color:var(--gold);}
+  .stat .cap{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:8px;
+  }
 
-  /* ===== FOOTER ===== */
-  footer{padding:30px 0 0;border-top:1px solid var(--line);margin-top:34px;}
-  footer p{font-size:13px;color:var(--chalk);margin-bottom:6px;}
+  /* ---------- Tabela (terceiros colocados) ---------- */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    margin:18px 0 6px;
+    background:var(--card);
+  }
+  table.stand{
+    width:100%;
+    border-collapse:collapse;
+    font-size:15px;
+  }
+  table.stand th{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:11px;
+    font-weight:600;
+    color:var(--gold);
+    text-align:left;
+    padding:12px 10px;
+    background:var(--night-2);
+  }
+  table.stand th.c,table.stand td.c{text-align:center;}
+  table.stand td{
+    padding:11px 10px;
+    border-top:1px solid var(--line);
+    color:#dbe5f5;
+  }
+  table.stand td.pos{
+    font-family:var(--display);
+    font-weight:600;
+    color:var(--muted);
+    width:30px;
+  }
+  table.stand td.grp{
+    font-family:var(--display);
+    color:var(--gold);
+    font-weight:600;
+    width:34px;
+  }
+  table.stand td.team{font-weight:600;color:var(--ink);}
+  table.stand td.pts{font-family:var(--display);font-weight:700;font-size:17px;color:var(--pitch);}
+  table.stand tr.qual td{background:rgba(61,220,132,0.06);}
+  table.stand tr.cut td{
+    padding:0;
+    border-top:2px dashed var(--pitch-dim);
+  }
+  table.stand tr.cut .cutbar{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:11px;
+    color:var(--pitch);
+    padding:7px 10px;
+    background:rgba(61,220,132,0.10);
+  }
+  table.stand tr.out td{color:var(--muted);}
+  table.stand tr.out td.pts{color:var(--muted);}
+  .table-note{font-size:13px;color:var(--muted);margin:0 0 6px;}
+
+  /* ---------- Agenda ---------- */
+  .fixtures{list-style:none;margin:14px 0 0;padding:0;}
+  .fixtures li{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 14px;
+    align-items:baseline;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .fixtures li:first-child{border-top:none;}
+  .fixtures .grp{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-size:12px;
+    color:var(--gold);
+    min-width:74px;
+  }
+  .fixtures .game{font-weight:600;font-size:17px;flex:1;min-width:200px;}
+  .fixtures .time{font-family:var(--display);letter-spacing:.04em;color:var(--muted);font-size:14px;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.show{opacity:1;transform:none;}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:30px 0 50px;
+    color:var(--muted);
+    font-size:13px;
+    text-align:center;
+  }
+  footer .dot{color:var(--pitch);}
 
   @media (max-width:560px){
-    .hero{padding:38px 0 24px;}
-    section{padding:28px 0;}
+    body{font-size:16px;}
+    section{padding:42px 0;}
+    .nav-brand{margin-right:0;width:100%;}
+    table.stand{font-size:14px;}
+    table.stand th,table.stand td{padding:10px 7px;}
   }
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{transition:none;opacity:1;transform:none;}
+  }
 
   /* ---------- Dropdown: Recaps anteriores ---------- */
-  .nav-more{position:relative;margin-left:auto;}
+  .nav-more{position:relative;margin-left:6px;}
   .nav-more-btn{
-    font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;
-    font-size:12px;font-weight:600;color:var(--navy);background:var(--gold);
-    border:none;border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:12px;
+    font-weight:600;
+    color:var(--night);
+    background:var(--gold);
+    border:none;
+    border-radius:999px;
+    padding:7px 14px;
+    cursor:pointer;
   }
   .nav-more-btn:hover{background:#f6cf6b;}
   .nav-more-btn .caret{margin-left:6px;font-size:10px;}
   .nav-more-panel{
-    position:absolute;top:calc(100% + 8px);right:0;
-    width:262px;max-width:86vw;
-    background:var(--navy-3);border:1px solid var(--line);border-radius:10px;
-    padding:8px;display:none;z-index:60;
-    box-shadow:0 12px 30px rgba(0,0,0,.45);
+    position:absolute;
+    top:calc(100% + 8px);
+    right:0;
+    width:262px;
+    max-width:86vw;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:8px;
+    display:none;
+    z-index:80;
+    box-shadow:0 12px 30px rgba(0,0,0,0.45);
   }
   .nav-more-panel.open{display:block;}
   .nav-more-title{
-    font-family:var(--disp);text-transform:uppercase;letter-spacing:.12em;
-    font-size:10px;color:var(--muted);padding:6px 8px 8px;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:10px;
+    color:var(--muted);
+    padding:6px 8px 8px;
   }
-  .nav-more-item{display:block;padding:10px;border-radius:7px;color:var(--ink);text-decoration:none;}
-  .nav-more-item:hover{background:var(--navy-2);}
+  .nav-more-item{
+    display:block;
+    padding:10px;
+    border-radius:7px;
+    color:var(--ink);
+  }
+  .nav-more-item:hover{background:var(--night-2);}
   .nav-more-item .d{
-    font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;
-    font-size:11px;color:var(--gold);
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-size:11px;
+    color:var(--gold);
   }
   .nav-more-item .t{display:block;font-size:13px;margin-top:2px;line-height:1.3;color:var(--ink);}
+  .nav-more-empty{padding:10px;color:var(--muted);font-size:13px;}
 
-  /* Correção mobile: botão padronizado (igual Dia 13/14) + cartão de largura cheia */
+  /* Correção mobile: dropdown vira cartão de largura cheia sob a barra */
   @media (max-width:560px){
-    .brand{width:100%;}
-    .nav-more{position:static;margin-left:0;}
-    .nav-more-panel{left:14px;right:14px;width:auto;max-width:none;}
+    .nav-more{position:static;}
+    .nav-more-panel{
+      left:14px;
+      right:14px;
+      width:auto;
+      max-width:none;
+    }
   }
+
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="inner">
-    <div class="brand">Copa do Mundo 2026 · <span>Dia 15</span></div>
-    <nav class="navlinks">
-      <a href="#placar">Placar</a>
-      <a href="#record">Campanha perfeita</a>
-      <a href="#terceiros">3º lugar</a>
-      <a href="#tunisia">Pior de todas?</a>
-      <a href="#sexta">Sexta-feira</a>
-    </nav>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Copa do Mundo 2026 · <b>Dia 15</b></div>
+    <a class="nav-link" href="#placar">Placar</a>
+    <a class="nav-link" href="#record">Campanha perfeita</a>
+    <a class="nav-link" href="#terceiros">3º lugar</a>
+    <a class="nav-link" href="#tunisia">Pior de todas?</a>
+    <a class="nav-link" href="#sexta">Sexta-feira</a>
     <div class="nav-more">
       <button type="button" class="nav-more-btn" id="prevBtn" aria-haspopup="true" aria-expanded="false">Recaps anteriores<span class="caret">&#9660;</span></button>
       <div class="nav-more-panel" id="prevPanel" role="menu">
@@ -255,245 +423,271 @@
       </div>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="wrap">
-
-  <header class="hero">
-    <div class="eyebrow">Resumo do Dia 15 · 26 de junho</div>
-    <h1>O Equador derruba a Alemanha. Os <em>EUA</em> tropeçam. E a Tunísia entra para a história — pelo motivo errado.</h1>
-    <p class="lede">Um dia de zebras, reservas e contas: a Alemanha perde os 100% de aproveitamento, os Estados Unidos caem para a Turquia já classificados em primeiro, e a corrida pelas oito melhores terceiras vagas começa a se afunilar.</p>
-    <div class="meta">Equador derruba a Alemanha · EUA tropeçam para a Turquia · Tunísia quase a pior da história · <b>Grupos D, E e F encerrados</b></div>
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Resumo do Dia 15 · 26 de junho</span>
+    <h1>O Equador <span class="hl">derruba a Alemanha</span> — e os EUA <span class="gl">tropeçam diante da Turquia</span></h1>
+    <p class="sub">Um dia de zebras, reservas e contas: a Alemanha perde os 100% de aproveitamento, os Estados Unidos caem para a Turquia já classificados em primeiro, e a corrida pelas oito melhores terceiras vagas começa a se afunilar. A Tunísia, por sua vez, entra para a história pelo motivo errado.</p>
+    <div class="meta">Equador derruba a Alemanha · EUA tropeçam para a Turquia · Tunísia quase a pior da história · Grupos D, E e F encerrados</div>
     <div class="source">Fonte · <b>The Athletic</b></div>
-  </header>
+  </div>
+</header>
 
-  <!-- PLACAR -->
-  <section id="placar">
-    <div class="kicker">Os seis jogos</div>
-    <h2>Placar do Dia 15</h2>
-    <div class="scores">
-
-      <div class="game">
-        <div class="grp">Grupo E</div>
-        <div class="row win"><span class="tm">Costa do Marfim</span><span class="sc">2</span></div>
-        <div class="row lose"><span class="tm">Curaçao</span><span class="sc">0</span></div>
+<section id="placar">
+  <div class="wrap reveal">
+    <p class="eyebrow">Resultados — Sexta, 26 de junho</p>
+    <h2>O placar do dia</h2>
+    <p class="lead">O Equador derruba a Alemanha e tira seu aproveitamento perfeito, os EUA são batidos pela Turquia mesmo já garantidos em primeiro, a Holanda fecha o Grupo F na liderança e Japão e Suécia empatam para avançar juntos. Austrália e Paraguai não saem do zero.</p>
+    <div class="scoreboard">
+      <div class="match">
+        <div class="tag"><b>Grupo E</b></div>
+        <div class="row win"><span class="team">Costa do Marfim</span><span class="pts">2</span></div>
+        <div class="row"><span class="team">Curaçao</span><span class="pts">0</span></div>
       </div>
-
-      <div class="game">
-        <div class="grp">Grupo E</div>
-        <div class="row win"><span class="tm">Equador</span><span class="sc">2</span></div>
-        <div class="row lose"><span class="tm">Alemanha</span><span class="sc">1</span></div>
-        <span class="tag">Maior zebra do Equador em Copas</span>
+      <div class="match">
+        <div class="tag"><b>Grupo E</b></div>
+        <div class="row win"><span class="team">Equador</span><span class="pts">2</span></div>
+        <div class="row"><span class="team">Alemanha</span><span class="pts">1</span></div>
       </div>
-
-      <div class="game">
-        <div class="grp">Grupo F</div>
-        <div class="row win"><span class="tm">Holanda</span><span class="sc">3</span></div>
-        <div class="row lose"><span class="tm">Tunísia</span><span class="sc">1</span></div>
-        <span class="tag gold">Holanda em 1º</span>
+      <div class="match">
+        <div class="tag"><b>Grupo F</b></div>
+        <div class="row win"><span class="team">Holanda</span><span class="pts">3</span></div>
+        <div class="row"><span class="team">Tunísia</span><span class="pts">1</span></div>
       </div>
-
-      <div class="game">
-        <div class="grp">Grupo F</div>
-        <div class="row"><span class="tm">Japão</span><span class="sc">1</span></div>
-        <div class="row"><span class="tm">Suécia</span><span class="sc">1</span></div>
-        <span class="tag">Empate classifica os dois</span>
+      <div class="match">
+        <div class="tag"><b>Grupo F</b></div>
+        <div class="row draw"><span class="team">Japão</span><span class="pts">1</span></div>
+        <div class="row draw"><span class="team">Suécia</span><span class="pts">1</span></div>
       </div>
-
-      <div class="game">
-        <div class="grp">Grupo D</div>
-        <div class="row"><span class="tm">Paraguai</span><span class="sc">0</span></div>
-        <div class="row"><span class="tm">Austrália</span><span class="sc">0</span></div>
-        <span class="tag">Austrália avança</span>
+      <div class="match">
+        <div class="tag"><b>Grupo D</b></div>
+        <div class="row draw"><span class="team">Paraguai</span><span class="pts">0</span></div>
+        <div class="row draw"><span class="team">Austrália</span><span class="pts">0</span></div>
       </div>
-
-      <div class="game">
-        <div class="grp">Grupo D</div>
-        <div class="row win"><span class="tm">Turquia</span><span class="sc">3</span></div>
-        <div class="row lose"><span class="tm">Estados Unidos</span><span class="sc">2</span></div>
-        <span class="tag gold">Ayhan no último minuto</span>
+      <div class="match">
+        <div class="tag"><b>Grupo D</b></div>
+        <div class="row win"><span class="team">Turquia</span><span class="pts">3</span></div>
+        <div class="row"><span class="team">Estados Unidos</span><span class="pts">2</span></div>
       </div>
-
     </div>
-
-    <div class="callout" style="margin-top:18px;">
-      <div class="lab">Como ficaram</div>
-      <p>Os <b>EUA</b>, já garantidos em primeiro no Grupo D, foram a campo com nove mudanças feitas por Pochettino e perderam de virada para a <b>Turquia</b>, com Kaan Ayhan marcando no fim. A seleção americana enfrenta a <b>Bósnia &amp; Herzegovina</b>, em Santa Clara, na próxima quarta-feira. A <b>Austrália</b> se classificou pelo grupo e o <b>Paraguai</b> é favorito a avançar como terceiro após o 0 a 0.</p>
-    </div>
-
-    <div class="callout gold">
-      <div class="lab">Mercado não para</div>
-      <p>A Copa pode parar o mundo, mas o mercado de transferências não: <b>Elliot Anderson</b> está prestes a se tornar o jogador britânico mais caro da história, com o Manchester City acertando £116 milhões (US$ 153 mi) por ele junto ao Nottingham Forest. A expectativa é que enfrente o Panamá no sábado.</p>
-    </div>
-  </section>
-
-  <!-- CAMPANHA PERFEITA -->
-  <section id="record">
-    <div class="kicker">A pergunta do dia</div>
-    <h2>100% de aproveitamento é superestimado?</h2>
-    <p>Julian Nagelsmann quase certamente não gostou de ver a Alemanha perder por 2 a 1 para o Equador — gol de Gonzalo Plata encerrando o aproveitamento perfeito. Mas e se isso aumentar as chances do título? O mesmo vale para Pochettino, que rodou o time e ainda assim terminou em primeiro no grupo.</p>
+    <p style="margin-top:18px;">Os EUA, já garantidos em primeiro no Grupo D, foram a campo com nove mudanças feitas por Pochettino e perderam de virada para a Turquia, com Kaan Ayhan marcando no fim. A seleção americana enfrenta a Bósnia e Herzegovina, em Santa Clara, na próxima quarta-feira. A Austrália se classificou pelo grupo e o Paraguai é favorito a avançar como terceiro após o 0 a 0.</p>
 
     <div class="callout">
-      <div class="lab">O padrão histórico</div>
-      <p>Nenhuma seleção venceu os três jogos da fase de grupos e foi campeã do mundo desde o <b>Brasil em 2002</b>.</p>
+      <div class="label">Mercado não para</div>
+      <p>A Copa pode parar o mundo, mas o mercado de transferências não: Elliot Anderson está prestes a se tornar o jogador britânico mais caro da história, com o Manchester City acertando £116 milhões (US$ 153 mi) por ele junto ao Nottingham Forest. A expectativa é que ele enfrente o Panamá no sábado.</p>
     </div>
+  </div>
+</section>
 
-    <p>Itália em 2006? Empatou com os EUA. Espanha na África do Sul? Estreou perdendo para a Suíça. Alemanha quatro anos depois? Empate com Gana. França e Argentina nas duas últimas edições? Um empate sem graça com a Dinamarca e a derrota chocante para a Arábia Saudita, respectivamente.</p>
+<section id="record">
+  <div class="wrap reveal">
+    <p class="eyebrow">A pergunta do dia</p>
+    <h2>100% de aproveitamento é superestimado?</h2>
+    <p class="lead">Julian Nagelsmann quase certamente não gostou de ver a Alemanha perder por 2 a 1 para o Equador — gol de Gonzalo Plata encerrando o aproveitamento perfeito. Mas e se isso aumentar as chances do título?</p>
+    <p>O mesmo raciocínio vale para Pochettino, que rodou o time e ainda assim terminou em primeiro no grupo. Há um padrão histórico curioso por trás disso.</p>
+
+    <div class="callout">
+      <div class="label">O padrão histórico</div>
+      <p>Nenhuma seleção venceu os três jogos da fase de grupos e foi campeã do mundo desde o Brasil em 2002. Itália em 2006? Empatou com os EUA. Espanha na África do Sul? Estreou perdendo para a Suíça. Alemanha quatro anos depois? Empate com Gana. França e Argentina nas duas últimas edições? Um empate sem graça com a Dinamarca e a derrota chocante para a Arábia Saudita, respectivamente.</p>
+    </div>
 
     <p>Há duas leituras possíveis. Em alguns casos, o eventual campeão poupou titulares e escalou um XI mais fraco — o que rendeu frutos lá na frente, com estrelas mais descansadas e um elenco mais motivado. Em outros, o time mandou tudo a campo e mesmo assim tropeçou: aí a mini-crise força mudanças necessárias ou une o grupo. A derrota da Argentina para a Arábia há quatro anos é o exemplo — empurrou Scaloni a trocar o 4-4-2 pelo 4-3-3 e a lançar Enzo Fernández na base do meio-campo.</p>
+    <p>Para vencer uma Copa, parece que o time quer um pouco de adversidade — só não demais. Vale notar: as cinco seleções ainda assim terminaram em primeiro no grupo.</p>
 
-    <p class="muted">Para vencer uma Copa, parece que o time quer um pouco de adversidade — só não demais. Vale notar: as cinco seleções ainda assim terminaram em primeiro no grupo.</p>
-
-    <div class="callout gold">
-      <div class="lab">Quem se "qualifica" por essa lógica</div>
-      <p><b>Podem ser campeãs</b> (não fecharam com 100%): Estados Unidos, Suíça, Brasil, Alemanha e Holanda. <b>Precisam evitar vencer o último jogo</b>: França, Argentina e Colombia. E um pedido de desculpas ao co-anfitrião <b>México</b>, que venceu os três jogos pela primeira vez na história na quarta — não este ano, pessoal.</p>
+    <div class="callout">
+      <div class="label">Quem se "qualifica" por essa lógica</div>
+      <p>Podem ser campeãs (não fecharam com 100%): Estados Unidos, Suíça, Brasil, Alemanha e Holanda. Precisam evitar vencer o último jogo: França, Argentina e Colômbia. E um pedido de desculpas ao co-anfitrião México, que venceu os três jogos pela primeira vez na história na quarta — não este ano, pessoal.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TERCEIROS -->
-  <section id="terceiros">
-    <div class="kicker">A corrida das vagas</div>
+<section id="terceiros">
+  <div class="wrap reveal">
+    <p class="eyebrow">A corrida das vagas</p>
     <h2>Quem leva a melhor entre os terceiros?</h2>
-    <p>Com 48 seleções, a organização criou uma rodada extra — o round de 32 — para preservar o mata-mata direto. Os dois primeiros de cada grupo avançam automaticamente; junta-se a eles as <b>oito melhores terceiras colocadas</b>. E 12 não cabe em 8.</p>
+    <p class="lead">Com 48 seleções, a organização criou uma rodada extra — o round de 32 — para preservar o mata-mata direto. Os dois primeiros de cada grupo avançam automaticamente; juntam-se a eles os oito melhores terceiros colocados. E 12 não cabe em 8.</p>
+    <p>Os critérios de desempate, em ordem: pontos, saldo de gols, gols marcados, fair-play (disciplina) e, se ainda houver empate, sorteio.</p>
 
     <div class="stats">
-      <div class="stat"><div class="n green">8</div><div class="l">melhores 3ºs avançam</div></div>
-      <div class="stat"><div class="n">12</div><div class="l">terceiros no total</div></div>
-      <div class="stat"><div class="n green">4</div><div class="l">pts no topo da fila</div></div>
+      <div class="stat">
+        <div class="num">8</div>
+        <div class="cap">melhores terceiros avançam ao round de 32</div>
+      </div>
+      <div class="stat">
+        <div class="num gold">12</div>
+        <div class="cap">terceiros colocados no total — quatro ficam de fora</div>
+      </div>
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="cap">pontos no topo da fila, com saldo decidindo</div>
+      </div>
     </div>
 
-    <p class="muted">Critérios de desempate, em ordem: pontos → saldo de gols → gols marcados → fair-play (disciplina) → e, se ainda empatados, sorteio.</p>
-
-    <div class="tbl-wrap">
-      <table>
+    <p class="table-note">Disputa dos terceiros colocados — os 8 melhores avançam:</p>
+    <div class="table-wrap">
+      <table class="stand">
         <thead>
-          <tr>
-            <th class="l">Grupo</th>
-            <th class="l">Seleção</th>
-            <th>GP</th><th>GC</th><th>SG</th><th>PTS</th>
-          </tr>
+          <tr><th class="c">#</th><th class="c">Gr.</th><th>Seleção</th><th class="c">SG</th><th class="c">Pts</th></tr>
         </thead>
         <tbody>
-          <tr class="qual"><td class="grp">F</td><td class="tm l">Suécia <span class="chk">✓</span></td><td>7</td><td>7</td><td>0</td><td class="pts">4</td></tr>
-          <tr class="qual"><td class="grp">E</td><td class="tm l">Equador <span class="chk">✓</span></td><td>2</td><td>2</td><td>0</td><td class="pts">4</td></tr>
-          <tr class="qual"><td class="grp">B</td><td class="tm l">Bósnia &amp; Herz. <span class="chk">✓</span></td><td>5</td><td>6</td><td>-1</td><td class="pts">4</td></tr>
-          <tr class="qual"><td class="grp">D</td><td class="tm l">Paraguai</td><td>2</td><td>4</td><td>-2</td><td class="pts">4</td></tr>
-          <tr class="qual"><td class="grp">L</td><td class="tm l">Croácia</td><td>3</td><td>4</td><td>-1</td><td class="pts">3</td></tr>
-          <tr class="qual"><td class="grp">A</td><td class="tm l">Coreia do Sul</td><td>2</td><td>3</td><td>-1</td><td class="pts">3</td></tr>
-          <tr class="qual"><td class="grp">J</td><td class="tm l">Argélia</td><td>2</td><td>4</td><td>-2</td><td class="pts">3</td></tr>
-          <tr class="qual"><td class="grp">C</td><td class="tm l">Escócia</td><td>1</td><td>4</td><td>-3</td><td class="pts">3</td></tr>
-          <tr class="cutline"><td colspan="6">▲ Zona de classificação (Round de 32) ▲</td></tr>
-          <tr><td class="grp">H</td><td class="tm l">Cabo Verde</td><td>2</td><td>2</td><td>0</td><td class="pts">2</td></tr>
-          <tr><td class="grp">G</td><td class="tm l">Bélgica</td><td>1</td><td>1</td><td>0</td><td class="pts">2</td></tr>
-          <tr><td class="grp">K</td><td class="tm l">R.D. Congo</td><td>1</td><td>2</td><td>-1</td><td class="pts">1</td></tr>
-          <tr><td class="grp">I</td><td class="tm l">Senegal</td><td>3</td><td>6</td><td>-3</td><td class="pts">0</td></tr>
+          <tr class="qual"><td class="pos c">1</td><td class="grp c">F</td><td class="team">Suécia</td><td class="c">0</td><td class="pts c">4</td></tr>
+          <tr class="qual"><td class="pos c">2</td><td class="grp c">E</td><td class="team">Equador</td><td class="c">0</td><td class="pts c">4</td></tr>
+          <tr class="qual"><td class="pos c">3</td><td class="grp c">B</td><td class="team">Bósnia e Herzegovina</td><td class="c">-1</td><td class="pts c">4</td></tr>
+          <tr class="qual"><td class="pos c">4</td><td class="grp c">D</td><td class="team">Paraguai</td><td class="c">-2</td><td class="pts c">4</td></tr>
+          <tr class="qual"><td class="pos c">5</td><td class="grp c">L</td><td class="team">Croácia</td><td class="c">-1</td><td class="pts c">3</td></tr>
+          <tr class="qual"><td class="pos c">6</td><td class="grp c">A</td><td class="team">Coreia do Sul</td><td class="c">-1</td><td class="pts c">3</td></tr>
+          <tr class="qual"><td class="pos c">7</td><td class="grp c">J</td><td class="team">Argélia</td><td class="c">-2</td><td class="pts c">3</td></tr>
+          <tr class="qual"><td class="pos c">8</td><td class="grp c">C</td><td class="team">Escócia</td><td class="c">-3</td><td class="pts c">3</td></tr>
+          <tr class="cut"><td colspan="5"><div class="cutbar">▲ Classificam ao round de 32</div></td></tr>
+          <tr class="out"><td class="pos c">9</td><td class="grp c">H</td><td class="team">Cabo Verde</td><td class="c">0</td><td class="pts c">2</td></tr>
+          <tr class="out"><td class="pos c">10</td><td class="grp c">G</td><td class="team">Bélgica</td><td class="c">0</td><td class="pts c">2</td></tr>
+          <tr class="out"><td class="pos c">11</td><td class="grp c">K</td><td class="team">RD Congo</td><td class="c">-1</td><td class="pts c">1</td></tr>
+          <tr class="out"><td class="pos c">12</td><td class="grp c">I</td><td class="team">Senegal</td><td class="c">-3</td><td class="pts c">0</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="tbl-note">✓ classificação já assegurada. Escócia na corda bamba; abaixo da linha tracejada, eliminação. Cabo Verde, que cometeu apenas <b>uma falta</b> no 0 a 0 com a Espanha, leva vantagem no critério disciplinar em caso de empate técnico.</p>
-
-    <p style="margin-top:16px;">Definidos os oito, a FIFA usa uma fórmula baseada no grupo de cada seleção para decidir o adversário no round de 32 — a Inglaterra, por exemplo, só pode pegar uma terceira colocada dos grupos E, H, I, J ou K. O formato arguivelmente prejudica quem jogou nos grupos mais cedo: dificilmente entraram no último jogo sabendo do que precisavam, enquanto os classificados automáticos só conhecem o rival dois dias antes. A contrapartida é mais descanso — algo curioso vindo de uma FIFA que pregava "justiça e equidade".</p>
-  </section>
-
-  <!-- TUNISIA -->
-  <section id="tunisia">
-    <div class="kicker">A lanterna histórica</div>
-    <h2>A Tunísia é a pior seleção da história das Copas?</h2>
-    <p>Este ano, a <b>R.D. Congo</b> voltou a uma Copa após 52 anos — a última aparição foi como Zaire, em 1974, primeira nação subsaariana a se classificar. Naquele torneio, perdeu os três jogos, não marcou e levou 14 gols, herdando a fama de pior time da história por ter o pior saldo entre seleções que disputaram uma fase de grupos completa.</p>
-
-    <p>A <b>Tunísia</b>, porém, montou um sério desafio a esse posto. Tendo liderado seu grupo de qualificação por 13 pontos, as Águias de Cartago não deveriam ser <em>tão</em> ruins. No grupo com Holanda, Suécia e Japão, a derrota de quinta para os holandeses fechou a campanha: três derrotas, 12 gols sofridos, apenas 2 marcados, e o técnico Sabri Lamouchi demitido após uma rodada.</p>
-
-    <div class="stats">
-      <div class="stat"><div class="n red" style="color:var(--red)">−10</div><div class="l">saldo da Tunísia</div></div>
-      <div class="stat"><div class="n">1–5</div><div class="l">0–4 · 1–3 (placares)</div></div>
-      <div class="stat"><div class="n">12</div><div class="l">gols sofridos em 3 jogos</div></div>
-    </div>
-
-    <p>Seu saldo de −10 foi melhor que o do Zaire, mas a Tunísia tem menos desculpas. O Zaire caiu num grupo com Brasil, Iugoslávia e Escócia — pelo ranking Elo de fim de ano, 3º, 8º e 11º do mundo. A Tunísia pegou um dos grupos mais fracos do torneio: Holanda apenas 7ª, Japão 17º e Suécia, que mal se classificou na repescagem, em 36º. As outras seleções africanas, aliás, foram muito melhores — nenhuma outra da CAF foi eliminada até aqui.</p>
+    <p class="table-note">Cabo Verde, que cometeu apenas uma falta no 0 a 0 com a Espanha, leva vantagem no critério disciplinar em caso de empate técnico. As posições ainda podem mudar nos últimos jogos.</p>
 
     <div class="callout">
-      <div class="lab">O contexto desde 2000</div>
-      <p>Apenas duas seleções ficaram sem vencer na fase de grupos com saldo pior que o da Tunísia: a <b>Coreia do Norte</b> (−11), com a desculpa de ter caído com Brasil e Portugal, e a <b>Arábia Saudita de 2002</b> (−12), que pegou só uma seleção forte (Alemanha) e duas mais fracas (Irlanda e Camarões). É difícil dizer que a Tunísia realmente superou a Coreia do Norte.</p>
+      <div class="label">Como funciona o chaveamento</div>
+      <p>Definidos os oito, a FIFA usa uma fórmula baseada no grupo de cada seleção para decidir o adversário no round de 32 — a Inglaterra, por exemplo, só pode pegar uma terceira colocada dos grupos E, H, I, J ou K. O formato pode prejudicar quem jogou nos grupos mais cedo: dificilmente entraram no último jogo sabendo do que precisavam, enquanto os classificados automáticos só conhecem o rival dois dias antes. A contrapartida é mais descanso.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tunisia">
+  <div class="wrap reveal">
+    <p class="eyebrow">A lanterna histórica</p>
+    <h2>A Tunísia é a pior seleção da história das Copas?</h2>
+    <p class="lead">Este ano, a RD Congo voltou a uma Copa após 52 anos — a última aparição foi como Zaire, em 1974, primeira nação subsaariana a se classificar. Naquele torneio, perdeu os três jogos, não marcou e levou 14 gols, herdando a fama de pior time da história.</p>
+    <p>A Tunísia, porém, montou um sério desafio a esse posto. Tendo liderado seu grupo de qualificação por 13 pontos, as Águias de Cartago não deveriam ser tão ruins. No grupo com Holanda, Suécia e Japão, a derrota de quinta para os holandeses fechou a campanha: três derrotas, 12 gols sofridos, apenas 2 marcados, e o técnico Sabri Lamouchi demitido após uma rodada.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num" style="color:var(--red);">−10</div>
+        <div class="cap">saldo de gols da Tunísia em três jogos</div>
+      </div>
+      <div class="stat">
+        <div class="num gold">2</div>
+        <div class="cap">gols marcados — contra 12 sofridos</div>
+      </div>
+      <div class="stat">
+        <div class="num">0</div>
+        <div class="cap">pontos somados na fase de grupos</div>
+      </div>
     </div>
 
-    <p class="muted">A Tunísia não é exatamente a pior seleção da história das Copas — mas chega perto.</p>
-  </section>
+    <p>Seu saldo de −10 foi melhor que o do Zaire, mas a Tunísia tem menos desculpas. O Zaire caiu num grupo com Brasil, Iugoslávia e Escócia — pelo ranking Elo de fim de ano, 3º, 8º e 11º do mundo. A Tunísia pegou um dos grupos mais fracos do torneio: Holanda apenas 7ª, Japão 17º e Suécia, que mal se classificou na repescagem, em 36º. As outras seleções africanas foram muito melhores — nenhuma outra da CAF foi eliminada até aqui.</p>
 
-  <!-- SEXTA -->
-  <section id="sexta">
-    <div class="kicker">O que vem por aí</div>
-    <h2>Os jogos de sexta-feira</h2>
-    <p>Encerram-se os Grupos G, H e I. O destaque é o duelo entre <b>Espanha e Uruguai</b>, em Guadalajara. Horários convertidos para Brasília.</p>
-
-    <h3>Grupo I — Noruega e França com 100%</h3>
-    <p>França e Noruega têm campanhas perfeitas e estão garantidas em 1º e 2º; pelo saldo, a França leva o grupo em caso de empate. Deschamps desfalca a comissão após a morte da mãe. Se o <b>Senegal</b> vencer o Iraque, deve avançar como melhor terceiro — uma vitória elástica conta a seu favor.</p>
-
-    <h3>Grupo H — Espanha precisa vencer</h3>
-    <p>Após o empate com Cabo Verde, a <b>Espanha</b> precisa bater o Uruguai para garantir o 1º lugar — e a queda uruguaia na fase de grupos seria talvez a maior zebra da Copa. A pequena <b>Cabo Verde</b>, notavelmente, precisa apenas de um empate para se garantir.</p>
-
-    <h3>Grupo G — o mais apertado</h3>
-    <p>O <b>Egito</b> está em vantagem: vence o grupo se bater o Irã, e um empate também deve bastar, desde que a Bélgica não goleie a Nova Zelândia. O <b>Irã</b> ainda pode roubar o grupo com uma vitória, se superar o resultado belga. Após dois empates, a <b>Bélgica</b> depende de outros: empate com a NZ significa avançar em 2º ou 3º; derrota, e está fora. A <b>Nova Zelândia</b> ainda busca a primeira vitória em Copas.</p>
-
-    <div class="fixtures">
-      <div class="fix"><span class="gp">Grupo I</span><span class="mt">Noruega × França</span><span class="hr">16h</span></div>
-      <div class="fix"><span class="gp">Grupo I</span><span class="mt">Senegal × Iraque</span><span class="hr">16h</span></div>
-      <div class="fix"><span class="gp">Grupo H</span><span class="mt">Cabo Verde × Arábia Saudita</span><span class="hr">21h</span></div>
-      <div class="fix"><span class="gp">Grupo H</span><span class="mt">Uruguai × Espanha</span><span class="hr">21h</span></div>
-      <div class="fix"><span class="gp">Grupo G</span><span class="mt">Egito × Irã</span><span class="hr">0h</span></div>
-      <div class="fix"><span class="gp">Grupo G</span><span class="mt">Nova Zelândia × Bélgica</span><span class="hr">0h</span></div>
+    <div class="callout">
+      <div class="label">O contexto desde 2000</div>
+      <p>Apenas duas seleções ficaram sem vencer na fase de grupos com saldo pior que o da Tunísia: a Coreia do Norte (−11), com a desculpa de ter caído com Brasil e Portugal, e a Arábia Saudita de 2002 (−12), que pegou só uma seleção forte (Alemanha) e duas mais fracas (Irlanda e Camarões). É difícil dizer que a Tunísia realmente superou a Coreia do Norte — mas chega perto.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>Copa do Mundo 2026 · Resumo do Dia 15 — 26 de junho de 2026.</p>
-    <p>Horários convertidos de ET para o fuso de Brasília (ET + 1h).</p>
-  </footer>
+<section id="sexta">
+  <div class="wrap reveal">
+    <p class="eyebrow">O que vem por aí</p>
+    <h2>O que esperar dos jogos de sexta?</h2>
+    <p class="lead">Encerram-se os Grupos G, H e I. O destaque é o duelo entre Espanha e Uruguai, em Guadalajara. Horários convertidos para Brasília.</p>
+    <p>No Grupo I, França e Noruega têm campanhas perfeitas e estão garantidas em 1º e 2º; pelo saldo, a França leva o grupo em caso de empate. Deschamps desfalca a comissão após a morte da mãe. Se o Senegal vencer o Iraque, deve avançar como melhor terceiro — uma vitória elástica conta a seu favor.</p>
+    <p>No Grupo H, após o empate com Cabo Verde, a Espanha precisa bater o Uruguai para garantir o 1º lugar — e a queda uruguaia na fase de grupos seria talvez a maior zebra da Copa. A pequena Cabo Verde, notavelmente, precisa apenas de um empate para se garantir. Já o Grupo G é o mais apertado: o Egito vence o grupo se bater o Irã, e um empate também deve bastar, desde que a Bélgica não goleie a Nova Zelândia, que ainda busca sua primeira vitória em Copas.</p>
 
-</div>
+    <ul class="fixtures">
+      <li><span class="grp">Grupo I</span><span class="game">Noruega x França</span><span class="time">16h00 (Brasília)</span></li>
+      <li><span class="grp">Grupo I</span><span class="game">Senegal x Iraque</span><span class="time">16h00 (Brasília)</span></li>
+      <li><span class="grp">Grupo H</span><span class="game">Cabo Verde x Arábia Saudita</span><span class="time">21h00 (Brasília)</span></li>
+      <li><span class="grp">Grupo H</span><span class="game">Uruguai x Espanha</span><span class="time">21h00 (Brasília)</span></li>
+      <li><span class="grp">Grupo G</span><span class="game">Egito x Irã</span><span class="time">00h00 (Brasília)</span></li>
+      <li><span class="grp">Grupo G</span><span class="game">Nova Zelândia x Bélgica</span><span class="time">00h00 (Brasília)</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Resumo do Dia 15 <span class="dot">·</span> Copa do Mundo 2026 <span class="dot">·</span> 26 de junho de 2026<br>
+    Fonte: The Athletic
+  </div>
+</footer>
 
 <script>
-  (function(){
-    var links = document.querySelectorAll('.navlinks a');
-    for (var i = 0; i < links.length; i++){
-      links[i].addEventListener('click', function(e){
-        var id = this.getAttribute('href');
-        if (id && id.charAt(0) === '#'){
-          var target = document.querySelector(id);
-          if (target){
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+(function(){
+  "use strict";
+
+  // Rolagem suave para os links da navegação (funciona em visualizadores sandbox)
+  var links = document.querySelectorAll('a.nav-link');
+  var i;
+  for(i = 0; i < links.length; i++){
+    links[i].addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href && href.charAt(0) === '#'){
+        var target = document.getElementById(href.substring(1));
+        if(target){
+          e.preventDefault();
+          try{
+            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+          }catch(err){
+            target.scrollIntoView();
           }
         }
-      });
-    }
+      }
+    });
+  }
 
-    var prevBtn = document.getElementById('prevBtn');
-    var prevPanel = document.getElementById('prevPanel');
-    if (prevBtn && prevPanel){
-      prevBtn.addEventListener('click', function(e){
-        e.stopPropagation();
-        var isOpen = prevPanel.className.indexOf('open') !== -1;
-        if (isOpen){
-          prevPanel.className = 'nav-more-panel';
-          prevBtn.setAttribute('aria-expanded', 'false');
-        } else {
-          prevPanel.className = 'nav-more-panel open';
-          prevBtn.setAttribute('aria-expanded', 'true');
+  // Reveal ao rolar, com fallback caso IntersectionObserver não exista
+  var reveals = document.querySelectorAll('.reveal');
+  var j;
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      var k;
+      for(k = 0; k < entries.length; k++){
+        if(entries[k].isIntersecting){
+          entries[k].target.classList.add('show');
+          obs.unobserve(entries[k].target);
         }
-      });
-      prevPanel.addEventListener('click', function(e){ e.stopPropagation(); });
-      document.addEventListener('click', function(){
+      }
+    }, {threshold: 0.12});
+    for(j = 0; j < reveals.length; j++){
+      obs.observe(reveals[j]);
+    }
+  }else{
+    for(j = 0; j < reveals.length; j++){
+      reveals[j].classList.add('show');
+    }
+  }
+
+  // Dropdown "Recaps anteriores"
+  var prevBtn = document.getElementById('prevBtn');
+  var prevPanel = document.getElementById('prevPanel');
+  if(prevBtn && prevPanel){
+    prevBtn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = prevPanel.className.indexOf('open') !== -1;
+      if(isOpen){
         prevPanel.className = 'nav-more-panel';
         prevBtn.setAttribute('aria-expanded', 'false');
-      });
-      document.addEventListener('keydown', function(e){
-        if (e.keyCode === 27){
-          prevPanel.className = 'nav-more-panel';
-          prevBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  })();
+      }else{
+        prevPanel.className = 'nav-more-panel open';
+        prevBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+    prevPanel.addEventListener('click', function(e){ e.stopPropagation(); });
+    document.addEventListener('click', function(){
+      prevPanel.className = 'nav-more-panel';
+      prevBtn.setAttribute('aria-expanded', 'false');
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.keyCode === 27){
+        prevPanel.className = 'nav-more-panel';
+        prevBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
 </script>
 <script src="recaps.js"></script>
 </body>
