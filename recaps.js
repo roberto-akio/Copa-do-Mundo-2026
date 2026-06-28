@@ -1,6 +1,18 @@
 (function(){
   "use strict";
 
+  /* -----------------------------------------------------------------------
+     ABRIR SEMPRE NO TOPO
+     Ignora qualquer ancora (#secao) herdada da URL e rola para o topo no
+     carregamento. Vale para todas as paginas que carregam este arquivo.
+     ----------------------------------------------------------------------- */
+  try {
+    if (window.location.hash && window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  } catch (e) {}
+
   /* =======================================================================
      LISTA ÚNICA DE RECAPS
      Para publicar um novo recap, adicione UMA linha aqui (o mais recente
