@@ -96,50 +96,39 @@
   }
   .nav a.nav-link:hover{color:var(--ink);border-bottom-color:var(--pitch);}
 
-  .prev-wrap{position:relative;}
-  #prevBtn{
-    font-family:var(--display);
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    font-size:13px;
-    background:var(--gold);
-    color:var(--night);
-    border:none;
-    border-radius:999px;
-    padding:7px 16px;
-    cursor:pointer;
-    font-weight:600;
+  /* ---------- Dropdown: Recaps (padrao Dia 13) ---------- */
+  .nav-more{position:relative;margin-left:6px;}
+  .nav-more-btn{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;
+    font-size:12px;font-weight:600;color:var(--night);background:var(--gold);
+    border:none;border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap;
   }
-  #prevBtn:hover{background:var(--gold-soft);}
-  #prevPanel{
-    display:none;
-    position:absolute;
-    right:0;
-    top:120%;
-    min-width:280px;
-    background:var(--night-2);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:8px;
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
+  .nav-more-btn:hover{background:#f6cf6b;}
+  .nav-more-btn .caret{margin-left:6px;font-size:10px;}
+  .nav-more-panel{
+    position:absolute;top:calc(100% + 8px);right:0;
+    width:262px;max-width:86vw;
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:8px;display:none;z-index:80;
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
   }
-  #prevPanel.open{display:block;}
-  #prevPanel a{
-    display:block;
-    padding:10px 12px;
-    border-radius:9px;
-    color:var(--ink);
-    font-size:14px;
+  .nav-more-panel.open{display:block;}
+  .nav-more-title{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;
+    font-size:10px;color:var(--muted);padding:6px 8px 8px;
   }
-  #prevPanel a:hover{background:var(--card);}
-  #prevPanel a .d{
-    font-family:var(--display);
-    color:var(--gold);
-    font-size:12px;
-    letter-spacing:.08em;
-    display:block;
+  .nav-more-item{display:block;padding:10px;border-radius:7px;color:var(--ink);text-decoration:none;}
+  .nav-more-item:hover{background:var(--night-2);}
+  .nav-more-item .d{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:11px;color:var(--gold);
   }
-  #prevPanel a.current{opacity:.5;cursor:default;}
+  .nav-more-item .t{display:block;font-size:13px;margin-top:2px;line-height:1.3;color:var(--ink);}
+
+  @media (max-width:560px){
+    .nav-more{position:static;}
+    .nav-more-panel{left:14px;right:14px;width:auto;max-width:none;}
+  }
 
   /* ---------- Layout ---------- */
   .wrap{max-width:880px;margin:0 auto;padding:0 22px;}
@@ -386,9 +375,9 @@
       <a class="nav-link" href="#holanda">Holanda</a>
       <a class="nav-link" href="#japao">Jap&atilde;o</a>
       <a class="nav-link" href="#dia11">Dia 11</a>
-      <div class="prev-wrap">
-        <button id="prevBtn" type="button" aria-haspopup="true" aria-expanded="false">Recaps &#9662;</button>
-        <div id="prevPanel"></div>
+      <div class="nav-more">
+        <button type="button" class="nav-more-btn" id="prevBtn" aria-haspopup="true" aria-expanded="false">Recaps <span class="caret">&#9660;</span></button>
+        <div class="nav-more-panel" id="prevPanel" role="menu"></div>
       </div>
     </div>
   </nav>
@@ -509,48 +498,7 @@
     }
     window.scrollTo(0, 0);
 
-    // Dropdown "Recaps anteriores" (fallback caso recaps.js nao defina a lista)
-    var btn = document.getElementById('prevBtn');
-    var panel = document.getElementById('prevPanel');
-    var atual = 10;
-
-    var lista = (typeof window.RECAPS !== 'undefined' && window.RECAPS) ? window.RECAPS : [
-      { dia: 17, arquivo: 'recap-dia-17.html', titulo: 'Argentina tem a rota mais leve; Messi mira Fontaine' },
-      { dia: 16, arquivo: 'recap-dia-16.html', titulo: 'Dembélé mira a Bola de Ouro; Cabo Verde faz história' },
-      { dia: 15, arquivo: 'recap-dia-15.html', titulo: 'Equador derruba a Alemanha; EUA tropeçam' },
-      { dia: 14, arquivo: 'recap-dia-14.html', titulo: 'Brasil fecha o grupo em primeiro' },
-      { dia: 13, arquivo: 'recap-dia-13.html', titulo: 'Ronaldo entra para a história' },
-      { dia: 12, arquivo: 'recap-dia-12.html', titulo: 'Messi vira o maior artilheiro da história' },
-      { dia: 11, arquivo: 'recap-dia-11.html', titulo: 'Lamine Yamal entra em cena; o torneio dos goleiros' },
-      { dia: 10, arquivo: 'recap-dia-10.html', titulo: 'A atuação histórica de Eloy Room' }
-    ];
-
-    var html = '';
-    for (var i = 0; i < lista.length; i++){
-      var r = lista[i];
-      var cur = (r.dia === atual) ? ' current' : '';
-      var href = (r.dia === atual) ? 'javascript:void(0)' : r.arquivo;
-      html += '<a class="' + ('item' + cur) + '" href="' + href + '">' +
-              '<span class="d">Dia ' + r.dia + '</span>' + r.titulo + '</a>';
-    }
-    panel.innerHTML = html;
-
-    function toggle(){
-      var open = panel.className.indexOf('open') > -1;
-      panel.className = open ? '' : 'open';
-      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-    }
-    btn.addEventListener('click', function(e){ e.stopPropagation(); toggle(); });
-    document.addEventListener('click', function(e){
-      if (panel.className.indexOf('open') > -1){
-        if (e.target !== panel && !panel.contains(e.target) && e.target !== btn){
-          panel.className = '';
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      }
-    });
-
-    // Reveal on scroll
+    // Reveal ao rolar
     var els = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window){
       var io = new IntersectionObserver(function(entries){
