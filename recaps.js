@@ -20,6 +20,7 @@
      publicados passam a mostrar a lista completa automaticamente.
      ======================================================================= */
   var RECAPS = [
+    { dia: 18, arquivo: "recap-dia-18.html", titulo: "Canadá vence no fim; é Europa x América do Sul?" },
     { dia: 17, arquivo: "recap-dia-17.html", titulo: "Argentina tem a rota mais leve; Messi mira Fontaine" },
     { dia: 16, arquivo: "recap-dia-16.html", titulo: "Dembélé mira a Bola de Ouro; Cabo Verde faz história" },
     { dia: 15, arquivo: "recap-dia-15.html", titulo: "Equador derruba a Alemanha; EUA tropeçam" },
