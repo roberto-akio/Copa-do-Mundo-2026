@@ -20,6 +20,7 @@
      publicados passam a mostrar a lista completa automaticamente.
      ======================================================================= */
   var RECAPS = [
+    { dia: 20, arquivo: "recap-dia-20.html", titulo: "O ataque da França e a fome de recordes de Haaland" },
     { dia: 19, arquivo: "recap-dia-19.html", titulo: "Quantas zebras a gente quer?" },
     { dia: 18, arquivo: "recap-dia-18.html", titulo: "Canadá vence no fim; é Europa x América do Sul?" },
     { dia: 17, arquivo: "recap-dia-17.html", titulo: "Argentina tem a rota mais leve; Messi mira Fontaine" },
